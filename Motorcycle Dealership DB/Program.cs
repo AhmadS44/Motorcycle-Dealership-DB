@@ -1,4 +1,12 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Motorcycle_Dealership_DB.Data;
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("Motorcycle_Dealership_DBContextConnection") ?? throw new InvalidOperationException("Connection string 'Motorcycle_Dealership_DBContextConnection' not found.");
+
+builder.Services.AddDbContext<Motorcycle_Dealership_DBContext>(options => options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Motorcycle_Dealership_DBContext>();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
