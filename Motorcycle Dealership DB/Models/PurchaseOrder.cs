@@ -7,7 +7,7 @@
         public string Model { get; set; }
         public int Zip { get; set; }
         public int PhoneNumber { get; set; }
-      
+
       
         public Customers customers { get; set; }
     }
