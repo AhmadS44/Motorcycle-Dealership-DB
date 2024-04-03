@@ -10,10 +10,7 @@
 
 
 
-
-
         public Motorcycle motorcycle { get; set; }
-        public Supplier supplier { get; set; }
 
 
     }

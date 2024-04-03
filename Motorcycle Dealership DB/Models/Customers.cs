@@ -9,5 +9,8 @@
         public string Address { get; set; }
         public string Email { get; set; }
 
+        
+        public ICollection<PurchaseOrder> PurchaseOrder { get; set; }
+
     }
 }

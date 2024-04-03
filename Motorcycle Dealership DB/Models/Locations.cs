@@ -10,5 +10,7 @@
         public int ContactNumber { get; set; }
 
 
+        public ICollection<Supplier> Supplier { get; set; }
+
     }
 }

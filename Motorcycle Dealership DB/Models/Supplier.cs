@@ -11,6 +11,9 @@
         public string Street { get; set; }
         public string City { get; set; }
         public int  Zip { get; set; }
-        
+
+
+        public Locations Locations { get; set; }
+
     }
 }

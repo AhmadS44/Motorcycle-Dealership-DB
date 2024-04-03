@@ -8,5 +8,9 @@
         public int Weight { get; set; }
         public string Colour { get; set; }
 
+
+        public ICollection<Inventory> Inventory { get; set; }
+
+
     }
 }
