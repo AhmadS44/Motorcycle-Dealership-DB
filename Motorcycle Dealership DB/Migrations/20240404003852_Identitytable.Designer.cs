@@ -5,15 +5,16 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Motorcycle_Dealership_DB.Data;
+using Motorcycle_Dealership_DB.Areas.Identity.Data;
+
 
 #nullable disable
 
 namespace Motorcycle_Dealership_DB.Migrations
 {
     [DbContext(typeof(Motorcycle_Dealership_DBContext))]
-    [Migration("20240324211620_IdentityAdded")]
-    partial class IdentityAdded
+    [Migration("20240404003852_Identitytable")]
+    partial class Identitytable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

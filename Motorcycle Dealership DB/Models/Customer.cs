@@ -1,6 +1,6 @@
 ﻿namespace Motorcycle_Dealership_DB.Models
 {
-    public class Customers
+    public class Customer
     {
         public int CustomerID { get; set; }
         public string FirstName { get; set; }

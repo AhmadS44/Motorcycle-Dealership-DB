@@ -2,7 +2,7 @@
 {
     public class PurchaseOrder
     {
-        public int OrderID { get; set; }
+        public int PurchaseOrderID { get; set; }
         public int CustomerID { get; set; }
         public DateTime PurchaseDate { get; set; }
         public string Model { get; set; }
@@ -10,6 +10,6 @@
         public int PhoneNumber { get; set; }
 
       
-        public Customers customers { get; set; }
+        public Customer customer { get; set; }
     }
 }
