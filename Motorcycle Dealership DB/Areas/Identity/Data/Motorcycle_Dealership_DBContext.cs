@@ -25,4 +25,14 @@ public class Motorcycle_Dealership_DBContext : IdentityDbContext<IdentityUser>
     }
 
 public DbSet<Motorcycle_Dealership_DB.Models.Customer> Customer { get; set; } = default!;
+
+public DbSet<Motorcycle_Dealership_DB.Models.Inventory> Inventory { get; set; } = default!;
+
+public DbSet<Motorcycle_Dealership_DB.Models.Locations> Locations { get; set; } = default!;
+
+public DbSet<Motorcycle_Dealership_DB.Models.Motorcycles> Motorcycles { get; set; } = default!;
+
+public DbSet<Motorcycle_Dealership_DB.Models.PurchaseOrder> PurchaseOrder { get; set; } = default!;
+
+public DbSet<Motorcycle_Dealership_DB.Models.Supplier> Supplier { get; set; } = default!;
 }
