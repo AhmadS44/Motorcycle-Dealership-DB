@@ -3,6 +3,7 @@
     public class PurchaseOrder
     {
         public int OrderID { get; set; }
+        public int CustomerID { get; set; }
         public DateTime PurchaseDate { get; set; }
         public string Model { get; set; }
         public int Zip { get; set; }

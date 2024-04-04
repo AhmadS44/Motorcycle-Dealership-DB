@@ -3,6 +3,7 @@
     public class Inventory
     {
         public int InventoryID { get; set; }
+        public int MotorcyclesID { get; set; }
         public string Model { get; set; }
         public int PhoneNumber { get; set; }
         public string Email { get; set; }
@@ -10,7 +11,7 @@
 
 
 
-        public Motorcycle motorcycle { get; set; }
+        public Motorcycles motorcycles { get; set; }
 
 
     }

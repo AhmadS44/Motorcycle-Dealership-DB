@@ -3,6 +3,7 @@
     public class Supplier
     {
         public int SupplierID { get; set; }
+        public int LocationID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int PhoneNumber { get; set; }

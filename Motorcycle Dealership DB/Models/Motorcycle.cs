@@ -1,8 +1,8 @@
 ﻿namespace Motorcycle_Dealership_DB.Models
 {
-    public class Motorcycle
+    public class Motorcycles
     {
-        public int MotorcycleID { get; set; }
+        public int MotorcyclesID { get; set; }
         public string Model { get; set; }
         public int Year { get; set; }
         public int Weight { get; set; }
