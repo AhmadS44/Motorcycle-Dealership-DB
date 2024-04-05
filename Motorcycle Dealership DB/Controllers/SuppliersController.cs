@@ -22,7 +22,7 @@ namespace Motorcycle_Dealership_DB.Controllers
         // GET: Suppliers
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Supplier.ToListAsync());
+            return View(await _context.Suppliers.ToListAsync());
         }
 
         // GET: Suppliers/Details/5
@@ -33,7 +33,7 @@ namespace Motorcycle_Dealership_DB.Controllers
                 return NotFound();
             }
 
-            var supplier = await _context.Supplier
+            var supplier = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.SupplierID == id);
             if (supplier == null)
             {
@@ -54,7 +54,7 @@ namespace Motorcycle_Dealership_DB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("SupplierID,LocationID,FirstName,LastName,PhoneNumber,Email,Role,Street,City,Zip")] Supplier supplier)
+        public async Task<IActionResult> Create([Bind("SupplierID,LocationID,FirstName,LastName,PhoneNumber,Email,Role,Street,City,Zip")] Suppliers supplier)
         {
             if (ModelState.IsValid)
             {
@@ -73,7 +73,7 @@ namespace Motorcycle_Dealership_DB.Controllers
                 return NotFound();
             }
 
-            var supplier = await _context.Supplier.FindAsync(id);
+            var supplier = await _context.Suppliers.FindAsync(id);
             if (supplier == null)
             {
                 return NotFound();
@@ -86,9 +86,9 @@ namespace Motorcycle_Dealership_DB.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("SupplierID,LocationID,FirstName,LastName,PhoneNumber,Email,Role,Street,City,Zip")] Supplier supplier)
+        public async Task<IActionResult> Edit(int id, [Bind("SupplierID,LocationID,FirstName,LastName,PhoneNumber,Email,Role,Street,City,Zip")] Suppliers supplier)
         {
-            if (id != supplier.SupplierID)
+            if (id != supplier.SuppliersID)
             {
                 return NotFound();
             }
@@ -102,7 +102,7 @@ namespace Motorcycle_Dealership_DB.Controllers
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SupplierExists(supplier.SupplierID))
+                    if (!SupplierExists(supplier.SuppliersID))
                     {
                         return NotFound();
                     }
@@ -124,7 +124,7 @@ namespace Motorcycle_Dealership_DB.Controllers
                 return NotFound();
             }
 
-            var supplier = await _context.Supplier
+            var supplier = await _context.Suppliers
                 .FirstOrDefaultAsync(m => m.SupplierID == id);
             if (supplier == null)
             {
@@ -139,10 +139,10 @@ namespace Motorcycle_Dealership_DB.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var supplier = await _context.Supplier.FindAsync(id);
+            var supplier = await _context.Suppliers.FindAsync(id);
             if (supplier != null)
             {
-                _context.Supplier.Remove(supplier);
+                _context.Suppliers.Remove(supplier);
             }
 
             await _context.SaveChangesAsync();
@@ -151,7 +151,7 @@ namespace Motorcycle_Dealership_DB.Controllers
 
         private bool SupplierExists(int id)
         {
-            return _context.Supplier.Any(e => e.SupplierID == id);
+            return _context.Suppliers.Any(e => e.SupplierID == id);
         }
     }
 }

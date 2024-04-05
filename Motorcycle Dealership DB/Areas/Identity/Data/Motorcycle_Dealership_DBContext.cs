@@ -34,5 +34,5 @@ public DbSet<Motorcycle_Dealership_DB.Models.Motorcycles> Motorcycles { get; set
 
 public DbSet<Motorcycle_Dealership_DB.Models.PurchaseOrder> PurchaseOrder { get; set; } = default!;
 
-public DbSet<Motorcycle_Dealership_DB.Models.Supplier> Supplier { get; set; } = default!;
+public DbSet<Motorcycle_Dealership_DB.Models.Suppliers> Suppliers { get; set; } = default!;
 }

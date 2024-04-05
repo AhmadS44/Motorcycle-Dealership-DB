@@ -10,7 +10,7 @@
         public int ContactNumber { get; set; }
 
 
-        public ICollection<Supplier> Supplier { get; set; }
+        public ICollection<Suppliers> Suppliers { get; set; }
 
     }
 }
