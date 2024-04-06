@@ -1,4 +1,4 @@
-﻿@model Motorcycle_Dealership_DB.Models.Supplier
+﻿@model Motorcycle_Dealership_DB.Models.Suppliers
 
 @{
     ViewData["Title"] = "Create";
@@ -13,9 +13,9 @@
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="LocationID" class="control-label"></label>
-                <input asp-for="LocationID" class="form-control" />
-                <span asp-validation-for="LocationID" class="text-danger"></span>
+                <label asp-for="LocationsID" class="control-label"></label>
+                <input asp-for="LocationsID" class="form-control" />
+                <span asp-validation-for="LocationsID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="FirstName" class="control-label"></label>
@@ -38,14 +38,9 @@
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Role" class="control-label"></label>
-                <input asp-for="Role" class="form-control" />
-                <span asp-validation-for="Role" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Street" class="control-label"></label>
-                <input asp-for="Street" class="form-control" />
-                <span asp-validation-for="Street" class="text-danger"></span>
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="City" class="control-label"></label>

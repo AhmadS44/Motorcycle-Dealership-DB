@@ -34,7 +34,7 @@ namespace Motorcycle_Dealership_DB.Controllers
             }
 
             var supplier = await _context.Suppliers
-                .FirstOrDefaultAsync(m => m.SupplierID == id);
+                .FirstOrDefaultAsync(m => m.SuppliersID == id);
             if (supplier == null)
             {
                 return NotFound();
@@ -125,7 +125,7 @@ namespace Motorcycle_Dealership_DB.Controllers
             }
 
             var supplier = await _context.Suppliers
-                .FirstOrDefaultAsync(m => m.SupplierID == id);
+                .FirstOrDefaultAsync(m => m.SuppliersID == id);
             if (supplier == null)
             {
                 return NotFound();
@@ -151,7 +151,7 @@ namespace Motorcycle_Dealership_DB.Controllers
 
         private bool SupplierExists(int id)
         {
-            return _context.Suppliers.Any(e => e.SupplierID == id);
+            return _context.Suppliers.Any(e => e.SuppliersID == id);
         }
     }
 }
