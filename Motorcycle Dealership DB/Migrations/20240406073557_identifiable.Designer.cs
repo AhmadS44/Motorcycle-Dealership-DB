@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Motorcycle_Dealership_DB.Areas.Identity.Data;
 
@@ -11,9 +12,11 @@ using Motorcycle_Dealership_DB.Areas.Identity.Data;
 namespace Motorcycle_Dealership_DB.Migrations
 {
     [DbContext(typeof(Motorcycle_Dealership_DBContext))]
-    partial class Motorcycle_Dealership_DBContextModelSnapshot : ModelSnapshot
+    [Migration("20240406073557_identifiable")]
+    partial class identifiable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

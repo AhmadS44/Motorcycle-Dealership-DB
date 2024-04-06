@@ -27,13 +27,15 @@ namespace Motorcycle_Dealership_DB.Areas.Identity.Data
                     }
                     context.SaveChanges();
 
-            var Suppliers = new Suppliers[]
-          {
 
-                        new Suppliers {LocationsID= 1,InventoryID=1, FirstName="Carl", LastName= "Joseph", PhoneNumber=0217283813, Email="carJ1@gmail.com", City="Auckland", Address="172 Blockhousebay Road", Zip=1029},
+
+            var Suppliers = new Suppliers[]
+            {
+                new Suppliers {LocationsID= 1,InventoryID=1, FirstName="Carl", LastName= "Joseph", PhoneNumber=0217283813, Email="carJ1@gmail.com", City="Auckland", Address="172 Blockhousebay Road", Zip=1029},
                         new Suppliers {LocationsID= 2,InventoryID=2, FirstName="Lawindi", LastName= "Patel", PhoneNumber=0218463896,Email="Lawindipatel@gmail.com", City="Auckland", Address="21 Christ Street", Zip=1821},
                         new Suppliers {LocationsID= 3,InventoryID=3, FirstName="John", LastName= "Prasad", PhoneNumber=021783346, Email="johnp21@gmail.com", City="Christchurch", Address="12 Moony Road", Zip=2172},
-          };
+            };
+
             foreach (Suppliers s in Suppliers)
 
             {
