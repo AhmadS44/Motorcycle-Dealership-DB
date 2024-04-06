@@ -4,10 +4,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Motorcycle_Dealership_DB.Models;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Motorcycle_Dealership_DB.Areas.Identity.Data;
 
-public class Motorcycle_Dealership_DBContext : IdentityDbContext<IdentityUser>
+public class Motorcycle_Dealership_DBContext : IdentityDbContext<ApplicationUser>
 {
     internal object customer;
 
@@ -15,6 +16,7 @@ public class Motorcycle_Dealership_DBContext : IdentityDbContext<IdentityUser>
         : base(options)
     {
     }
+    
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
@@ -35,4 +37,15 @@ public DbSet<Motorcycle_Dealership_DB.Models.Motorcycles> Motorcycles { get; set
 public DbSet<Motorcycle_Dealership_DB.Models.PurchaseOrder> PurchaseOrder { get; set; } = default!;
 
 public DbSet<Motorcycle_Dealership_DB.Models.Suppliers> Suppliers { get; set; } = default!;
+}
+
+public class ApplicationUserEntityConfiguration : IEntityTypeConfiguration<ApplicationUser>
+{
+    public void Configure(EntityTypeBuilder<ApplicationUser> builder)
+    {
+        builder.Property(u => u.FirstName).HasMaxLength(20);
+        builder.Property(u => u.LastName).HasMaxLength(20);
+        builder.Property(u => u.PhoneNumber).HasMaxLength(10);
+
+    }
 }
