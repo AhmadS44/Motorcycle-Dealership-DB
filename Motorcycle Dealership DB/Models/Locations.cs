@@ -7,8 +7,7 @@
         public string City { get; set; }
         public string Address { get; set; }
         public int Zip { get; set; }
-        public int ContactNumber { get; set; }
-
+        public int PhoneNumber { get; set; }      
 
         public ICollection<Suppliers> Suppliers { get; set; }
 

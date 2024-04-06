@@ -60,9 +60,9 @@ namespace Motorcycle_Dealership_DB.Areas.Identity.Data
             var locations = new Locations[]
             {
 
-                        new Locations {Country="New Zealand", City= "Auckland", Address= "92 Woolworth Street", Zip=4212, ContactNumber=0226378182},
-                        new Locations {Country="New Zealand", City= "Auckland", Address= "18 Ash Street", Zip=2142, ContactNumber=0216318269},
-                        new Locations {Country="New Zealand", City= "Wellington", Address= "17 Avondale Road", Zip=1090, ContactNumber=0216378169},
+                        new Locations {Country="New Zealand", City= "Auckland", Address= "92 Woolworth Street", Zip=4212, PhoneNumber=0226378182},
+                        new Locations {Country="New Zealand", City= "Auckland", Address= "18 Ash Street", Zip=2142, PhoneNumber=0216318269},
+                        new Locations {Country="New Zealand", City= "Wellington", Address= "17 Avondale Road", Zip=1090, PhoneNumber=0216378169},
             };
             foreach (Locations l in locations)
 

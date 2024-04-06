@@ -1,4 +1,4 @@
-﻿namespace Motorcycle_Dealership_DB.Models
+﻿ namespace Motorcycle_Dealership_DB.Models
 {
     public class Suppliers
     {
